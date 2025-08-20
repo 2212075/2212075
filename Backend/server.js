@@ -54,7 +54,7 @@ app.post("/shorturls", async (req, res) => {
   res.json({ shortUrl: `http://localhost:${PORT}/${shortCode}` });
 });
 
-app.get("/:shortCode", async (req, res) => {
+app.get("/shorturls/:shortCode", async (req, res) => {
   const { shortCode } = req.params;
   const entry = urlDatabase[shortCode];
   if (entry) {
